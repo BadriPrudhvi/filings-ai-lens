@@ -10,7 +10,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="container mx-auto py-6 px-4 animate-fade-in">
+      <main className="container mx-auto py-8 px-4 md:px-6 animate-fade-in">
         {children}
       </main>
     </div>

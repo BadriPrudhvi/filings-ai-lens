@@ -37,6 +37,36 @@
 
     --radius: 1rem;
   }
+  
+  .light-mode {
+    --background: 0 0% 98%;
+    --foreground: 222.2 84% 4.9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    
+    --primary: 255 85% 65%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 172 100% 35%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    
+    --accent: 0 90% 65%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    
+    --muted: 210 40% 93%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 255 85% 65%;
+  }
 }
 
 @layer base {
@@ -48,8 +78,17 @@
     @apply bg-background text-foreground;
     font-feature-settings: "ss01", "ss02";
     font-family: 'DM Sans', sans-serif;
-    letter-spacing: -2px;
-    line-height: 1.4;
+    letter-spacing: -0.5px; /* Improved from -2px for better readability */
+    line-height: 1.6; /* Increased from 1.4 for better spacing */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight leading-tight mb-2;
+    letter-spacing: -0.5px;
+  }
+  
+  p {
+    @apply text-base mb-4;
   }
 
   .glass-panel {
@@ -76,4 +115,28 @@
   .button-glow:hover:after {
     @apply opacity-100;
   }
+  
+  /* Improve spacing for form elements */
+  .form-group {
+    @apply mb-6;
+  }
+  
+  label {
+    @apply mb-2 block;
+  }
+  
+  /* Improve card spacing */
+  .card {
+    @apply p-6 md:p-8;
+  }
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
