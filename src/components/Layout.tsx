@@ -1,6 +1,5 @@
 
 import { ReactNode } from "react";
-import { Toaster } from "@/components/ui/sonner";
 import Navbar from "./Navbar";
 
 interface LayoutProps {
@@ -14,7 +13,6 @@ const Layout = ({ children }: LayoutProps) => {
       <main className="container mx-auto py-6 px-4 animate-fade-in">
         {children}
       </main>
-      <Toaster richColors />
     </div>
   );
 };
