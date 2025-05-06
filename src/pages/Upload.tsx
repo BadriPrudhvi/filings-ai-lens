@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
@@ -10,9 +9,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
-import { FileText, Upload, Edit3 } from "lucide-react";
+import { FileText, UploadIcon, Edit3 } from "lucide-react";
 
-const Upload = () => {
+const UploadPage = () => {
   const [filingType, setFilingType] = useState("");
   const [fileUploaded, setFileUploaded] = useState(false);
   const [peerCompany, setPeerCompany] = useState("");
@@ -153,7 +152,7 @@ const Upload = () => {
                       onClick={() => setCloudflareInputType("file")}
                       className="w-full md:w-auto"
                     >
-                      <Upload className="mr-2 h-4 w-4" /> Upload File
+                      <UploadIcon className="mr-2 h-4 w-4" /> Upload File
                     </Button>
                     <Button 
                       variant={cloudflareInputType === "text" ? "secondary" : "outline"} 
@@ -349,4 +348,4 @@ const Upload = () => {
   );
 };
 
-export default Upload;
+export default UploadPage;
