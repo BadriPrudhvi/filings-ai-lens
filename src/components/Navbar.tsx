@@ -2,7 +2,6 @@
 import { FileText, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ThemeToggle } from "./ThemeProvider";
 
 const Navbar = () => {
   return (
@@ -17,9 +16,7 @@ const Navbar = () => {
           </span>
         </Link>
 
-        <div className="flex items-center space-x-6">
-          <ThemeToggle />
-          
+        <div className="flex items-center space-x-6">          
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/upload">
               <Button variant="ghost" className="flex items-center space-x-2 hover:bg-soft-purple/20">
